@@ -1,110 +1,162 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Codibba App Icon</title>
-<link rel="shortcut icon" href="codibba-favicon.ico" type="image/x-icon">
+<title>The Codibba App</title>
 <style>
 * {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-background-color: #FDFBF7; /* Exact cream background */
-display: flex;
-align-items: center;
-justify-content: center;
-min-height: 100vh;
-color: #1A365D;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #FDFBF7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #1A365D;
 }
 .container {
-display: flex;
-max-width: 1000px;
-width: 90%;
-align-items: center;
-justify-content: space-between;
-gap: 60px;
+  display: flex;
+  max-width: 1000px;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 .content-left {
-flex: 1;
+  flex: 1;
+  min-width: 260px;
 }
 .content-left h1 {
-font-family: 'Georgia', serif;
-font-size: 3.5rem;
-color: #D4AF37; /* Beautiful Gold/Tan */
-line-height: 1.1;
-font-weight: 400;
-margin-bottom: 5px;
+  font-family: 'Georgia', serif;
+  font-size: 3.5rem;
+  color: #D4AF37;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 5px;
 }
 .content-left h2 {
-font-family: -apple-system, sans-serif;
-color: #1A365D; /* Dark Navy */
-font-weight: 800;
-font-size: 3.2rem;
-margin-bottom: 30px;
+  font-family: -apple-system, sans-serif;
+  color: #1A365D;
+  font-weight: 800;
+  font-size: 3.2rem;
+  margin-bottom: 30px;
 }
 .button-group {
-display: flex;
-gap: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 .btn-primary {
-background-color: #1A365D;
-color: white;
-padding: 12px 24px;
-border-radius: 6px;
-text-decoration: none;
-font-weight: 600;
-font-size: 0.95rem;
+  background-color: #1A365D;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.btn-primary:hover {
+  background-color: #2A4365;
 }
 .btn-secondary {
-background-color: transparent;
-color: #1A365D;
-padding: 12px 24px;
-border-radius: 6px;
-text-decoration: none;
-font-weight: 600;
-font-size: 0.95rem;
-border: 2px solid #E2E8F0;
+  background-color: transparent;
+  color: #1A365D;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid #E2E8F0;
+  transition: border-color 0.2s;
+}
+.btn-secondary:hover {
+  border-color: #1A365D;
 }
 .image-right {
-flex: 1;
-display: flex;
-justify-content: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 260px;
 }
 .icon-card {
-background: linear-gradient(135deg, #1A365D, #2A4365);
-padding: 40px;
-border-radius: 24px;
-box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-display: flex;
-justify-content: center;
-align-items: center;
-width: 380px;
-height: 380px;
+  background: linear-gradient(135deg, #1A365D, #2A4365);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 320px;
 }
 .icon-card img {
-width: 100%;
-height: 100%;
-object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.icon-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D4AF37;
+  font-family: 'Georgia', serif;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .button-group {
+    justify-content: center;
+  }
+  .content-left h1 {
+    font-size: 2.5rem;
+  }
+  .content-left h2 {
+    font-size: 2.2rem;
+  }
+  .icon-card {
+    width: 240px;
+    height: 240px;
+  }
 }
 </style>
 </head>
 <body>
 
 <div class="container">
-<div class="content-left">
-<h1>The Codibba</h1>
-<h2>App Icon</h2>
-<div class="button-group">
-<a href="#" class="btn-primary">Download Asset</a>
-<a href="#" class="btn-secondary">View Details</a>
-</div>
-</div>
+  <div class="content-left">
+    <h1>The Codibba</h1>
+    <h2>App</h2>
+    <div class="button-group">
+      <a href="#" class="btn-primary">Get Started</a>
+      <a href="#" class="btn-secondary">Learn More</a>
+    </div>
+  </div>
 
-<
+  <div class="image-right">
+    <div class="icon-card">
+      <img
+        src="codibba-icon-original-512.png"
+        alt="Codibba Icon"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+      <div class="icon-placeholder" style="display:none;">C</div>
+    </div>
+  </div>
 </div>
 
 </body>
